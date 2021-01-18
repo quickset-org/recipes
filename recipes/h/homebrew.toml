@@ -1,4 +1,19 @@
+[run]
+supported-os = ["macos", "linux"]
+app-name = "brew"
+
+[run.commands]
+update = "update"
+upgrade = "upgrade"
+install = "install"
+upgrade-does-update = true
+
 [macos]
-command = """
+install-command = """
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+"""
+
+[linux]
+install-command = """
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 """

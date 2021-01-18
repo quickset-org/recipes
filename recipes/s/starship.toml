@@ -1,13 +1,19 @@
 [macos]
-uses = "quickset/recipes:homebrew"
+installs-with = ["quickset-org/recipes:homebrew"]
 command = "starship"
 
 [linux]
-uses = "quickset/recipes:linuxbrew"
+installs-with = ["quickset-org/recipes:homebrew"]
 command = "starship"
+post-install = """
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc;
+echo 'eval "$(starship init zsh)"' >> ~/.bashrc;
+"""
+not-finished = true
+notes = "Need to make sure the above append to *rc files works"
 
 [windows10]
-uses = "quickset/recipes:scoop"
+installs-with = ["quickset-org/recipes:scoop"]
 command = "starship"
-postinstall = "New-item -type file -force $profile; Find profile and add starship init to it"
+post-install = "New-item -type file -force $profile; Find profile and add starship init to it"
 not-finished = true

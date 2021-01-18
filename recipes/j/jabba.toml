@@ -1,11 +1,11 @@
 [macos]
-uses = "quickset/recipes:homebrew"
+installs-with = "quickset-org/recipes:homebrew"
 command = "jabba"
 
 [linux]
-uses = "quickset/recipes:linuxbrew"
+installs-with = "quickset-org/recipes:homebrew"
 command = "jabba"
 
 [windows10]
-uses = "quickset/recipes:scoop"
+installs-with = "quickset-org/recipes:scoop"
 command = "jabba"
