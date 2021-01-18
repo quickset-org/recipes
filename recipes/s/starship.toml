@@ -1,0 +1,13 @@
+[macos]
+uses = "quickset/recipes:homebrew"
+command = "starship"
+
+[linux]
+uses = "quickset/recipes:linuxbrew"
+command = "starship"
+
+[windows10]
+uses = "quickset/recipes:scoop"
+command = "starship"
+postinstall = "New-item -type file -force $profile; Find profile and add starship init to it"
+not-finished = true
